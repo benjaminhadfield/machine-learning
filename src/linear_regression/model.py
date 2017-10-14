@@ -1,10 +1,10 @@
-from numpy import genfromtxt
+import numpy as np
 
 
 class LinearRegression:
     def __init__(self, points_file):
         # (1) Import data.
-        self.points = genfromtxt(points_file, delimiter=',')
+        self.points = np.genfromtxt(points_file, delimiter=',')
         # (2) Set hyperparams.
         self.learning_rate = 0.0001
         # Using y = mx + c.
@@ -30,13 +30,14 @@ class LinearRegression:
 
     @staticmethod
     def _step_gradient(points, m_initial, c_initial, learning_rate):
-        m_gradient = 0
-        c_gradient = 0
+        m_gradient = c_gradient = 0
         for p in points:
             p_x, p_y = p
-            # Get direction with respect to m and c.
-            m_gradient += -(2 / len(points)) * p_x * (p_y - ((m_initial * p_x) + c_initial))
-            c_gradient += -(2 / len(points)) * (p_y - ((m_initial * p_x) + c_initial))
+            # Get direction with respect to m and c (partial derivatives).
+            m_gradient += -(2 / len(points)) \
+                * p_x * (p_y - ((m_initial * p_x) + c_initial))
+            c_gradient += -(2 / len(points)) \
+                * (p_y - ((m_initial * p_x) + c_initial))
 
         m_new = m_initial - (learning_rate * m_gradient)
         c_new = c_initial - (learning_rate * c_gradient)
