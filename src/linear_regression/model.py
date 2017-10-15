@@ -7,7 +7,7 @@ class LinearRegression:
         self.points = np.genfromtxt(points_file, delimiter=',')
         # (2) Set hyperparams.
         self.learning_rate = 0.0001
-        # Using y = mx + c.
+        # Using `y = mx + c`.
         self.initial_c = 0
         self.initial_m = 0
         self.iterations = 1000
