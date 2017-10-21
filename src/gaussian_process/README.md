@@ -34,8 +34,7 @@ This is a generalisation on the (univariate) normal distribution, applied to hig
 
 ![Sample points in a multivariate normal distribution.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/600px-MultivariateNormal.png)
 
-The standard normal distribution is described by:
- - 𝑍 ~ 𝑁(0, 1)
+The random variable 𝑍 with a standard normal distribution is described by 𝑍 ~ 𝑁(0, 1).
 
 ## Introduction
 
