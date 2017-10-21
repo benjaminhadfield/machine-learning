@@ -5,28 +5,24 @@ class LinearRegression:
     def __init__(self, points_file):
         # (1) Import data.
         self.points = np.genfromtxt(points_file, delimiter=',')
-        # (2) Set hyperparams.
-        self.learning_rate = 0.0001
         # Using `y = mx + c`.
         self.initial_c = 0
         self.initial_m = 0
-        self.iterations = 1000
-        self._regression_for_line(self.points, self.initial_m, self.initial_c)
+        self._regression_for_line()
 
-    @staticmethod
-    def _regression_for_line(points, m, c):
+    def _regression_for_line(self):
         """
         Computes the total regression for the set of points and a given line.
         Eqn: `err := (1/N)(∑[1->N](yi - (mxi + b))^2)`
         """
         total_regression = 0
-        for p in points:
+        for p in self.points:
             # Get x and y values for point.
             p_x, p_y = p
             # Calc regression (error) using `(yi - (mxi + b))^2`.
-            total_regression += (p_y - (m * p_x + c)) ** 2
+            total_regression += (p_y - (self.initial_m * p_x + self.initial_c)) ** 2
         # Return the total divided by N.
-        return total_regression / len(points)
+        return total_regression / len(self.points)
 
     @staticmethod
     def _step_gradient(points, m_initial, c_initial, learning_rate):
@@ -43,20 +39,16 @@ class LinearRegression:
         c_new = c_initial - (learning_rate * c_gradient)
         return m_new, c_new
 
-    @staticmethod
-    def _gradient_descent_runner(points, initial_m, initial_c, learning_rate, iterations):
-        m = initial_m
-        c = initial_c
+    def _gradient_descent_runner(self, learning_rate, iterations):
+        m = self.initial_m
+        c = self.initial_c
         for i in range(iterations):
             # Update m, c with more accurate values.
-            m, c = LinearRegression._step_gradient(points, m, c, learning_rate)
+            m, c = self._step_gradient(self.points, m, c, learning_rate)
         return m, c
 
-    def learn(self):
+    def learn(self, learning_rate=0.001, iterations=1000):
         [m, c] = self._gradient_descent_runner(
-            self.points,
-            self.initial_m,
-            self.initial_c,
-            self.learning_rate,
-            self.iterations)
+            learning_rate,
+            iterations)
         return m, c
