@@ -18,21 +18,24 @@ The gaussian distribution, also called the normal distribution, is a continuous 
 
 A random variable 𝑋 with a normal distribution is described with two parameters:
  - the mean 𝜇
- - the standard deviation 𝜎
+ - the variance 𝜎²
  
-We write 𝑋 ~ 𝑁(𝜇, 𝜎).
+We write 𝑋 ~ 𝑁(𝜇, 𝜎²).
  
 The distribution is always symmetric about the mean. Approximately, 95% of the area of the distribution is within two standard deviations of the mean.
 
-As the standard deviation increases, the peak becomes lower and more area is distributed to the tails.
+As the standard deviation 𝜎 increases, the peak at 𝜇 becomes lower and more area is distributed to the tails.
 
 ![Gaussian distributions.](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Normal_Distribution_PDF.svg/700px-Normal_Distribution_PDF.svg.png)
 
 ### Multivariate normal distribution
 
-This is a generalisation on the (univariate) normal distribution to higher dimensions.
+This is a generalisation on the (univariate) normal distribution, applied to higher dimensions.
 
 ![Sample points in a multivariate normal distribution.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/600px-MultivariateNormal.png)
+
+The standard normal distribution is described by:
+ - 𝑍 ~ 𝑁(0, 1)
 
 ## Introduction
 
