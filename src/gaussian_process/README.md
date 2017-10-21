@@ -9,14 +9,8 @@
 
 Before we begin, it's important to understand the following terms:
  
- - [Gaussian distribution](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#gaussian-distribution).
- - [Multivariate normal distribution](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#multivariate-normal-distribution).
- 
-### Multivariate normal distribution
-
-This is a generalisation on the (univariate) normal distribution to higher dimensions.
-
-![Sample points in a multivariate normal distribution.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/600px-MultivariateNormal.png)
+ - [Gaussian distribution](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#gaussian-distribution)
+ - [Multivariate normal distribution](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#multivariate-normal-distribution)
 
 ### Gaussian Distribution
 
@@ -33,6 +27,12 @@ The distribution is always symmetric about the mean. Approximately, 95% of the a
 As the standard deviation increases, the peak becomes lower and more area is distributed to the tails.
 
 ![Gaussian distributions.](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Normal_Distribution_PDF.svg/700px-Normal_Distribution_PDF.svg.png)
+
+### Multivariate normal distribution
+
+This is a generalisation on the (univariate) normal distribution to higher dimensions.
+
+![Sample points in a multivariate normal distribution.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/600px-MultivariateNormal.png)
 
 ## Introduction
 
