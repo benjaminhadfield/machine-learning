@@ -1,6 +1,6 @@
 # Gaussian Process
 
-## Table of contents
+## Table of Contents
 
  - [Terminology](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#terminology)
   - [Introduction](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#introduction)
@@ -9,13 +9,30 @@
 
 Before we begin, it's important to understand the following terms:
  
- - Multivariate normal distribution.
+ - [Gaussian distribution](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#gaussian-distribution).
+ - [Multivariate normal distribution](https://github.com/benjaminhadfield/machine-learning/tree/master/src/gaussian_process#multivariate-normal-distribution).
  
 ### Multivariate normal distribution
 
 This is a generalisation on the (univariate) normal distribution to higher dimensions.
 
 ![Sample points in a multivariate normal distribution.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/600px-MultivariateNormal.png)
+
+### Gaussian Distribution
+
+The gaussian distribution, also called the normal distribution, is a continuous probability distribution that is common in both theory and practice.
+
+A random variable 𝑋 with a normal distribution is described with two parameters:
+ - the mean 𝜇
+ - the standard deviation 𝜎
+ 
+We write 𝑋 ~ 𝑁(𝜇, 𝜎).
+ 
+The distribution is always symmetric about the mean. Approximately, 95% of the area of the distribution is within two standard deviations of the mean.
+
+As the standard deviation increases, the peak becomes lower and more area is distributed to the tails.
+
+![Gaussian distributions.](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Normal_Distribution_PDF.svg/700px-Normal_Distribution_PDF.svg.png)
 
 ## Introduction
 
